@@ -8,7 +8,10 @@ import ssl
 ssl_context = ssl.create_default_context(cafile=certifi.where())
 
 model = VGG16(weights='imagenet')
-testimages = './testbilder'
+
+# testimages = './testbilder'
+# testimages = './testbilder_rotiert_20_grad'
+testimages = './testbilder_rotiert_180_grad'
 
 for bild_name in os.listdir(testimages):
     image_path = os.path.join(testimages, bild_name)
